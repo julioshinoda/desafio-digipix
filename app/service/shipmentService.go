@@ -3,11 +3,15 @@ package service
 import(
 	"gopkg.in/resty.v1"
 	"github.com/julioshinoda/desafio-digipix/app/model"
-	"errors"
 	"os"
+	"crypto/tls"
 )
 
 func GetZipcodeService(zipcode string) (*model.ShipmentModel,error) {
+
+
+    resty.SetTLSClientConfig(&tls.Config{ InsecureSkipVerify: true })
+
 
 	resp, err := resty.R().
 	SetHeader("Accept", "application/json").
@@ -17,8 +21,9 @@ func GetZipcodeService(zipcode string) (*model.ShipmentModel,error) {
 	Get(os.Getenv("BASE_URL")+"shipments/zipcode/"+zipcode)
 
     if err != nil {
-		return nil, errors.New("Erro no retorno da API")
+		return nil, err
 	}
 
     return resp.Result().(*model.ShipmentModel),nil
 }
+

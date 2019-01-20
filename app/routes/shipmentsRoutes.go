@@ -8,16 +8,6 @@ import(
 
 func Shipments(route *gin.Engine ){
 
-
-	route.GET("/morcego", func(c *gin.Context) {
-
-
-		c.JSON(200, gin.H{
-			"message": "ta la",
-		})
-	})
-
-
 	route.GET("/shipments/zipcode/:zipcode", func(c *gin.Context) {
 
 		zipcode := strings.Trim(strings.Replace(c.Param("zipcode"), "-", "",-1)," ")
