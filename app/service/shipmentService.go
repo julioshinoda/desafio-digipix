@@ -2,7 +2,7 @@ package service
 
 import(
 	"gopkg.in/resty.v1"
-	"github.com/desafio-digipix/app/model"
+	"github.com/julioshinoda/desafio-digipix/app/model"
 	"errors"
 	"os"
 )

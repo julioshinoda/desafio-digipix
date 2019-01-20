@@ -1,7 +1,7 @@
 package routes
 import(
 	"github.com/gin-gonic/gin"
-	"github.com/desafio-digipix/app/controller"
+	"github.com/julioshinoda/desafio-digipix/app/controller"
 	"strings"
 	"net/http"
 )

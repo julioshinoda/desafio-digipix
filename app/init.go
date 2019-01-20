@@ -2,7 +2,7 @@ package app
 
 import(
 	"github.com/gin-gonic/gin"
-	"github.com/desafio-digipix/app/routes"
+	"github.com/julioshinoda/desafio-digipix/app/routes"
 	"github.com/joho/godotenv"
 	"log"
 )

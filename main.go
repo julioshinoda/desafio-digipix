@@ -2,7 +2,7 @@ package main
 
 import(
 	"fmt"
-	"github.com/desafio-digipix/app"
+	"github.com/julioshinoda/desafio-digipix/app"
 )
 
 func main(){
